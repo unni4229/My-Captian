@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+struct org
+{
+char name[30],deprt[30];
+int emp_id,salary;
+};
+void main()
+{
+
+struct org employee[20];
+int n,i;
+printf("\nEnter the number of employees in your organization(<=20):");
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+{
+printf("\nEnter Person %d Name :",i);
+scanf("%s",&employee[i].name);
+printf("Employee Id :");
+scanf("%d",&employee[i].emp_id);
+printf("Employee Department Name :");
+scanf("%s",&employee[i].deprt);
+printf("Employee Salary :");
+scanf("%d",&employee[i].salary);
+}
+printf("\nEmployees Information\n");
+for(i=1;i<=n;i++)
+{
+printf("\nPerson %d\n Name : %s",i,employee[i].name);
+printf("\nEmployee Id : %d",employee[i].emp_id);
+printf("\nEmployee Department Name :%d",employee[i].deprt);
+printf("\nEmployee Salary : %d",employee[i].salary);
+}
+getch();
+}
